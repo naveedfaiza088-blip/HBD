@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Abdul Majid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(black, #1a1a1a);
+      color: white;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      text-align: center;
+      margin-top: 50px;
+      color: #8458;
+    }
+    .typing {
+      font-size: 1.3em;
+      width: 80%;
+      margin: 20px auto;
+      white-space: pre-wrap;
+      text-align: center;
+      border-right: 2px solid #fff;
+      animation: typing 6s steps(40, end), blink-caret .75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: white }
+    }
+    .confetti, .fireworks, .balloons {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+   
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉Happy Birthday 18th Abdul Majid 🎉</h1>
+
+  <div class="typing">
+    Dear Abdul Majid,😊
+
+On your special day,👀 I just want to tell you how truly grateful I am to have you in my life.💎
+
+You’re not just a friend — you are one of those rare souls who bring light 🌟 into the lives of others simply by being present. Your heart is made of kindness 💖, and your presence has been a silent strength on the days I didn’t even have the words to say what I was going through.
+
+I admire the way you carry so much warmth in your heart❤, even when life gets heavy. You make people feel seen, heard, and valued — and that’s something only the purest souls can do.💫
+
+I hope this year brings you closer to the dreams you’ve been silently wishing for🙃. May your heart always stay as pure🙌🏻, your smile as bright🤴🏻, and your journey as beautiful as your soul.💎
+
+You deserve every bit of happiness the world can offer🎇. And even on days when you feel low🙂, I hope you remember how deeply loved and appreciated you are.😉
+
+Always believe in yourself 💪, because you are capable of more than you realize. And no matter what life brings your way, always remember — you’re not alone. You are loved 💗, you are seen 👀, and you are appreciated more than you’ll ever know.
+
+Keep shining, keep believing🎀, and never stop being the amazing person you are.😉
+
+Happy Birthday❣, Abdul Majid. You mean more than words can ever say🤗.
+
+With love💖, respect🌚, and prayers — always. 💫🎂
+      
+            _____________🎉"سالگرہ مبارک" 🎉____________
+
+🤴🏻تمہاری زندگی ہمیشہ خوشیوں سے بھرپور ہو ✨
+
+😉تمہاری زندگی پھولوں کی طرح مہکتی رہے 👑
+🕊ستاروں کی طرح چمکتی رہے 💫
+
+💫تمہارا ہر قدم خوش نصیبی کی طرف بڑھے 💎
+♠اور تمہاری زندگی کا ہر صفحہ خوشیوں سے بھرا ہو 😊
+
+🌚یہ سالگرہ تمہیں نئی امیدیں، نئی کامیابیاں 🌠
+❄اور رب کی رضا دے، جو کبھی ختم نہ ہو... ❤️
+
+____________❣"آمین"❣ ____________
+
+  <div>
+    <video autoplay muted loop playsinline 
+       style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+  <source src="black gold video.mp4" type="video/mp4">
+</video>
+
+  </div>
+
+<audio id="bg-music" loop>
+  <source src="maahi.mp3" type="audio/mp3">
+  Your browser does not support audio.
+</audio>
+
+<script>
+  const music = document.getElementById("bg-music");
+
+  // Play music on user interaction (required on Netlify/most browsers)
+  window.addEventListener("click", () => {
+    music.play().catch(err => console.log("Play failed:", err));
+  });
+
+  // Also try to play automatically
+  window.addEventListener("load", () => {
+    music.play().catch(() => {
+      console.log("Autoplay blocked, waiting for user interaction.");
+    });
+  });
+</script>
+
+  <canvas class="confetti"></canvas>
+  <canvas class="fireworks"></canvas>
+  <canvas class="balloons"></canvas>
+
+  <script>
+    
+    const emojiConfetti = () => {
+      const emoji = ['🎉','🎈','✨','💖'];
+      for (let i = 0; i < 30; i++) {
+        const span = document.createElement('span');
+        span.textContent = emoji[Math.floor(Math.random()*emoji.length)];
+        span.style.position = 'fixed';
+        span.style.top = Math.random() * 100 + '%';
+        span.style.left = Math.random() * 100 + '%';
+        span.style.fontSize = (Math.random() * 30 + 20) + 'px';
+        span.style.animation = 'float 5s linear infinite';
+        document.body.appendChild(span);
+      }
+    };
+    emojiConfetti();
+  </script>
+  <style>
+    @keyframes float {
+      0% {transform: translateY(0); opacity: 1;}
+      100% {transform: translateY(100px); opacity: 0;}
+    }
+  </style>
+</body>
+</html>
